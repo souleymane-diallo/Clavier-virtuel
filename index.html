@@ -3,11 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="" content="">
+    <meta name="Description" content="clavier virtuel, jeûne développeur web, à la recherche d'une alternance">
     <!-- <link rel="stylesheet" href="reset.css"> -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="imag/x-icon" href="fab-icon_SD.ico">
     <link rel="stylesheet" href="keyboard.css">
-    <title>Clavier virtuel </title>
+    <link rel="stylesheet" href="keyboard-night.css">
+    <link rel="stylesheet" href="keyboard-light.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+    <title>Clavier virtuel | Souleymane | portfolio </title>
 </head>
 <body>
     
@@ -21,74 +26,98 @@
                 </ul>
             </nav>
             </div>
+            
         </header>
+        
         <!-- bloc principal du clavier -->
+        
+        <div class="ecran">
+            <textarea class="ecran1" name="textarea" id="" cols="30" rows="10"></textarea>
+        </div>
         <div class="container">
-            <main class="clavier-virtuel"> 
-         
-                <div class="ecran-sasi"></div>
-                <div class="touches-claviers">
-                <button class="buton btn1">1</button>
-                <button class="buton btn2">2</button>
-                <button class="buton btn3">3</button>
-                <button class="buton btn4">4</button>
-                <button class="buton btn5">5</button>
-                <button class="buton btn6">6</button>
-                <button class="buton btn7">7</button>
-                <button class="buton btn8">8</button>
-                <button class="buton btn9">9</button>
-                <button class="buton btn10">0</button>
-                <button class="btn-del">DEL</button>
-                <button class="buton btn11">A</button>
-                <button class="buton btn12">Z</button>
-                <button class="buton btn13">E</button>
-                <button class="buton btn14">R</button>
-                <button class="buton btn15">T</button>
-                <button class="buton btn16">Y</button>
-                <button class="buton btn17">U</button>
-                <button class="buton btn18">I</button>
-                <button class="buton btn19">O</button>
-                <button class="buton btn20">P</button>
-                <button class="btn-enter">ENTER</button>
-                <button class="btn-caps active-caps">CAPS </button>
-                <button class="buton btn21">Q</button>
-                <button class="buton btn22">S</button>
-                <button class="buton btn23">D</button>
-                <button class="buton btn24">F</button>
-                <button class="buton btn25">G</button>
-                <button class="buton btn26">H</button>
-                <button class="buton btn27">J</button>
-                <button class="buton btn28">K</button>
-                <button class="buton btn29">L</button>
-                <button class="buton btn30">M</button>
-                <!-- <button class="btn-shift">SHIFT</button> -->
-                <button class="buton btn31">W</button>
-                <button class="buton btn32">X</button>
-                <button class="buton btn33">C</button>
-                <button class="buton btn34">V</button>
-                <button class="buton btn35">B</button>
-                <button class="buton btn36">N</button>
-                <button class="buton btn37">? ,</button>
-                <button class="buton btn38">;</button>
-                <button class="buton btn39">/</button>
-                <button class="buton btn40">!</button>
-                <button class="buton-special-nuit active-nuit">MODE NUIT</button>
-                <button class="buton-space">SPACE</button>
-               
-                </div>
-    
-            </main>
+            
+
+            <section class="clavier_virtuel"> 
+                
+                
+                <div   class="key">1</div>
+                <div  class="key">2</div>
+                <div  class="key">3</div>
+                <div  class="key">4</div>
+                <div  class="key">5</div>
+                <div  class="key">6</div>
+                <div  class="key">7</div>
+                <div  class="key">8</div>
+                <div  class="key">9</div>
+                <div  class="key">0</div>
+                <div  class="key">(</div>
+                <div  class="key">)</div>
+                <div  class="key">=</div>
+                <div  class="key del"><i class="far fx  fa-backspace"></i></div>
+                <div  class="key tab"><i class="fas fx fa-exchange-alt"></i></div>
+                <div  class="key">a</div>
+                <div  class="key">z</div>
+                <div  class="key">e</div>
+                <div  class="key">r</div>
+                <div  class="key">t</div>
+                <div  class="key">y</div>
+                <div  class="key">u</div>
+                <div  class="key">i</div>
+                <div  class="key">o</div>
+                <div  class="key">p</div>
+                <div  class="key">^</div>
+                <div  class="key">$</div>
+                <div  class="key backslash dark_mode"><input type="checkbox" class="checkbox" id="chk" />
+                    <label class="label" for="chk">
+                        <i class="fas fa-moon"></i>
+                        <i class="fas fa-sun"></i>
+                        <div class="ball"></div>
+                    </label></div>
+                <div  class="key capslock capsled capsled-on"><i class="far fx fa-unlock-alt"></i></div>
+                <div  class="key">q</div>
+                <div  class="key">s</div>
+                <div  class="key">d</div>
+                <div  class="key">f</div>
+                <div  class="key">g</div>
+                <div  class="key">h</div>
+                <div  class="key">j</div>
+                <div  class="key">k</div>
+                <div data-key="76" class="key">l</div>
+                <div  class="key">m</div>
+                <div  class="key">ù</div>
+                <div  class="key return">Entrer</div>
+                <div  class="key leftshift"><i class="fal fx fa-arrow-alt-from-bottom"></i></div>
+                <div  class="key">w</div>
+                <div  class="key">x</div>
+                <div  class="key">c</div>
+                <div  class="key">v</div>
+                <div  class="key">b</div>
+                <div  class="key">n</div>
+                <div  class="key">?</div>
+                <div  class="key">;</div>
+                <div  class="key">/</div>
+                <div  class="key">*</div>
+                <div  class="key rightshift"><i class="fal fx fa-arrow-alt-from-bottom"></i></div>
+                <div  class="key leftctrl">Ctrl</div>
+                <div  class="key ">Alt</div>
+                <div  class="key win"><i class="fab fx fa-windows"></i></div>
+                <div  class="key space"></div>
+                <div  class="key win"><i class="fab fx fa-windows"></i></div>
+                <div  class="key ">Alt</div>
+                <div  class="key ">Ctrl</div>
+                <div  class="key "><a href="#"><i class="fab fx fa-github"></i></a></div>
+            </section>
         </div>
         
-        <footer class="footer" id="contact">
+        <!-- <footer class="footer" id="contact">
             <ul>
                 <li><a href="#">s.diallo.souleymane.d@gmail.com</a></li>
                 <li><a href="#">github</a></li>
                 <li><a href="#">profil twitter</a></li>
             </ul>
 
-        </footer>
+        </footer> -->
     
-    
+    <script src="keyboard.js"></script>
 </body>
 </html>
