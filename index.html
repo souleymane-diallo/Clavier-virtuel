@@ -40,74 +40,73 @@
 
 
         <section class="clavier_virtuel">
-
-
-            <div onclick="func1()" class="key">1</div>
-            <div class="key">2</div>
-            <div class="key">3</div>
-            <div class="key">4</div>
-            <div class="key">5</div>
-            <div class="key">6</div>
-            <div class="key">7</div>
-            <div class="key">8</div>
-            <div class="key">9</div>
-            <div class="key">0</div>
-            <div class="key">(</div>
-            <div class="key">)</div>
-            <div class="key">=</div>
-            <div class="key del"><i class="far fx  fa-backspace"></i></div>
-            <div class="key tab"><i class="fas fx fa-exchange-alt"></i></div>
-            <div class="key">a</div>
-            <div class="key">z</div>
-            <div class="key">e</div>
-            <div class="key">r</div>
-            <div class="key">t</div>
-            <div class="key">y</div>
-            <div class="key">u</div>
-            <div class="key">i</div>
-            <div class="key">o</div>
-            <div class="key">p</div>
-            <div class="key">^</div>
-            <div class="key">$</div>
-            <div class="key backslash dark_mode"><input type="checkbox" class="checkbox" id="chk" />
+            <button class="key" value="²">²</button>
+            <button class="key" value="&">&</button>
+            <button class="key" value="é">é</button>
+            <button class="key" value='"'>"</button>
+            <button class="key" value="'">'</button>
+            <button class="key" value="(">(</button>
+            <button class="key" value="-">-</button>
+            <button class="key" value="è">è</button>
+            <button class="key" value="_">_</button>
+            <button class="key" value="ç">ç</button>
+            <button class="key" value="à">à</button>
+            <button class="key" value=")">)</button>
+            <button class="key" value="=">=</button>
+            <button class="key del" value="Delete"> Del</button>
+            <button class="key tab" value="Tab">Tab</button>
+            <button class="key" value="a">a</button>
+            <button class="key" value="z">z</button>
+            <button class="key" value="e">e</button>
+            <button class="key" value="r">r</button>
+            <button class="key" value="t">t</button>
+            <button class="key" value="y">y</button>
+            <button class="key" value="u">u</button>
+            <button class="key" value="i">i</button>
+            <button class="key" value="o">o</button>
+            <button class="key" value="p">p</button>
+            <button class="key" value="^">^</button>
+            <button class="key" value="$">$</button>
+            <button class="key backslash dark_mode"><input type="checkbox" class="checkbox" id="chk" />
                 <label class="label" for="chk">
                         <i class="fas fa-moon"></i>
                         <i class="fas fa-sun"></i>
                         <div class="ball"></div>
-                    </label></div>
-            <div class="key capslock capsled capsled-on"><i class="far fx fa-unlock-alt"></i></div>
-            <div class="key test">q</div>
-            <div class="key">s</div>
-            <div class="key">d</div>
-            <div class="key">f</div>
-            <div class="key">g</div>
-            <div class="key">h</div>
-            <div class="key">j</div>
-            <div class="key">k</div>
-            <div data-key="76" class="key">l</div>
-            <div class="key">m</div>
-            <div class="key">ù</div>
-            <div class="key return">Entrer</div>
-            <div class="key leftshift"><i class="fal fx fa-arrow-alt-from-bottom"></i></div>
-            <div class="key">w</div>
-            <div class="key">x</div>
-            <div class="key">c</div>
-            <div class="key">v</div>
-            <div class="key">b</div>
-            <div class="key">n</div>
-            <div class="key">?</div>
-            <div class="key">;</div>
-            <div class="key">/</div>
-            <div class="key">*</div>
-            <div class="key rightshift"><i class="fal fx fa-arrow-alt-from-bottom"></i></div>
-            <div class="key leftctrl">Ctrl</div>
+                </label>
+            </button>
+            <button class="key capslock capsled capsled-on capsCircle" id="caps-lock"><i class="far fx fa-unlock-alt"></i></button>
+            <button class="key" value="q">q</button>
+            <button class="key" value="s">s</button>
+            <button class="key" value="d">d</button>
+            <button class="key" value="f">f</button>
+            <button class="key" value="g">g</button>
+            <button class="key" value="h">h</button>
+            <button class="key" value="j">j</button>
+            <button class="key" value="k">k</button>
+            <button class="key" value="l">l</button>
+            <button class="key" value="m">m</button>
+            <button class="key" value="ù">ù</button>
+            <button class="key return" value="Enter">Entrer</button>
+            <button class="key leftshift shiftCircle" id="shift"><i class="fal fx fa-arrow-alt-from-bottom"></i></button>
+            <button class="key" value="w">w</button>
+            <button class="key" value="x">x</button>
+            <button class="key" value="c">c</button>
+            <button class="key" value="v">v</button>
+            <button class="key" value="b">b</button>
+            <button class="key" value="n">n</button>
+            <button class="key" value=",">,</button>
+            <button class="key" value=";">;</button>
+            <button class="key" value="/">/</button>
+            <button class="key" value="!">!</button>
+            <button class="key rightshift shift"><i class="fal fx fa-arrow-alt-from-bottom"></i></button>
+            <!-- <div class="key leftctrl">Ctrl</div>
             <div class="key ">Alt</div>
-            <div class="key win"><i class="fab fx fa-windows"></i></div>
-            <div class="key space"></div>
-            <div class="key win"><i class="fab fx fa-windows"></i></div>
+            <div class="key win"><i class="fab fx fa-windows"></i></div> -->
+            <button class="key space" value="SPACE"></button>
+            <!-- <div class="key win"><i class="fab fx fa-windows"></i></div>
             <div class="key ">Alt</div>
-            <div class="key ">Ctrl</div>
-            <div class="key "><a href="https://github.com/souleymane-diallo/Clavier-virtuel.git"><i class="fab fx fa-github"></i></a></div>
+            <div class="key ">Ctrl</div> -->
+            <button class="key github"><a href="https://github.com/souleymane-diallo/Clavier-virtuel.git"><i class="fab fx fa-github"></i></a></button>
         </section>
     </div>
 
