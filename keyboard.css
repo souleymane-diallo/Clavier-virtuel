@@ -1,230 +1,183 @@
-@charset "utf-8";
 * {
+    box-sizing: border-box;
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuhet MS', sans-serif;
 }
 
-body {
-    font-family: 'Roboto', sans-serif;
-    font-size: 16px;
+main,
+footer {
+    text-align: center;
 }
 
-.topbar {
-    background: #21729F;
-    width: 100%;
-    color: #FEFBFB;
-    padding: 15px 0;
-    margin-bottom: 40px;
+.capsCircle,
+.shiftCircle {
+    background: #F00;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    display: inherit;
 }
 
-.center {
-    /* display: flex;
-    justify-content: space-between; */
-    width: 80%;
-    margin: auto;
-}
-
-.logo {
-    font-weight: 700;
-    font-size: 1.4rem;
-    align-self: center;
-}
-
-.navbar ul {
+.switch-ctnr {
     display: flex;
     justify-content: flex-end;
-}
-
-ul li {
-    list-style-type: none;
-}
-
-ul li a {
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 1.1rem;
-    color: #FEFBFB;
-}
-
-ul li:first-child {
-    margin-right: 50px;
-}
-
-h1 {
-    font-size: 1.8rem;
-    font-weight: 600;
-    color: rgba(#292c35, .90);
-    margin-bottom: 30px;
-    position: absolute;
-}
-
-
-/* ****clavier***** */
-
-.container {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* height: 100vh; */
-    margin-bottom: 30px;
-}
-
-
-/* ecran */
-
-.ecran {
-    width: 57%;
-    margin: auto;
-    height: 35%;
-    margin-bottom: 10px;
-    user-select: none;
-    border-radius: 5px;
-    padding: 15px 15px;
-    background: #292c35;
-    /* box-shadow: -3px -3px 7px #ffffff73, 2px 2px 5px rgba(94, 104, 121, 0.288); */
-}
-
-.ecran textarea {
-    width: 100%;
-    height: 100%;
-    border: none;
-    outline: none;
-    resize: none;
-    font-size: 20px;
-    padding: 10px 15px;
-    /* border-radius: 10px;
-    pointer-events: none;
-    background: #dde1e7; */
-    /* box-shadow: inset -3px -3px 7px #ffffff73, inset 2px 2px 5px rgba(94, 104, 121, 0.288); */
-}
-
-.clavier_virtuel {
     position: fixed;
-    margin: auto;
-    bottom: 20px;
-    width: 55%;
-    height: 40%;
-    padding: 30px;
-    background-color: #292c35;
-    border-radius: 10px;
-    display: grid;
-    grid-template-columns: repeat(30, 2.7%);
-    grid-template-rows: repeat(5, 40px);
-    grid-gap: 5px;
-    /* box-shadow: 0 5px #292c35; */
 }
 
-.key {
-    background: #A9A9A9;
-    border: 1px solid #A9A9A9;
-    border-radius: 5px;
-    grid-column: span 2;
-    cursor: pointer;
-    font-size: 19px;
-    display: grid;
-    align-items: center;
-    justify-items: center;
-    text-align: center;
-    /* padding-top: 15px; */
-    /* box-shadow: 0 3px #a8a8a8; */
+.LD,
+.AQ {
+    padding: 10px;
+}
+
+.switch {
     position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
 }
 
-.key:active {
-    border: 1px solid #eee;
-    box-shadow: 0 1px rgb(243, 243, 243);
-    transform: translateY(2px);
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
 }
 
-.del {
-    grid-column: span 4;
-}
-
-.tab {
-    grid-column: span 3;
-}
-
-.backslash {
-    grid-column: span 3;
-}
-
-.capslock {
-    grid-column: span 4;
-}
-
-.return {
-    grid-column: span 4;
-}
-
-.leftshift {
-    grid-column: span 5;
-}
-
-.rightshift {
-    grid-column: span 5;
-}
-
-.win {
-    grid-column: span 3;
-    font-size: 14px;
-}
-
-.leftctrl {
-    grid-column: span 3;
-}
-
-.space {
-    grid-column: 8/ span 13;
-}
-
-.github {
-    grid-column:
-}
-
-.capsled::after {
-    content: '';
-    top: 10px;
-    right: 10px;
+.slider {
     position: absolute;
-    width: 8px;
-    height: 8px;
-    background: rgba(0, 0, 0, .4);
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #CCC;
+    transition: .4s;
+}
+
+.slider::before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: #FFF;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: cadetblue;
+}
+
+input:checked+.slider::before {
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round::before {
     border-radius: 50%;
 }
 
-.capsled-on::after {
-    background: #06fd06;
-}
-
-.fx {
-    font-size: 1.4rem;
-    vertical-align: middle;
-}
-
-
-/* ================= */
-
-
-/* .footer {
+section {
     width: 100%;
-    background-color: #21729F;
-    padding: 10px 0;
-    position: fixed;
-    left: 0;
-    bottom: 0;
-
-
+    height: 100vh;
 }
-.footer ul {
-    width: 70%;
+
+form {
+    width: 100%;
+    height: 100%;
+    padding: 25px;
     margin: auto;
-    display: flex;
-    justify-content: space-between;
 }
-.footer ul li a {
-    font-size: 1.1rem;
-    font-weight: 400;
+
+form .screen {
+    width: 100%;
+    height: 40%;
+    place-items: center;
+    display: grid;
 }
-*/
+
+.screen textarea {
+    width: 60%;
+    height: 100%;
+    background-color: rgba(32, 12, 121, 0.657);
+    outline: none;
+    border: 8px solid #FFF;
+    border-radius: 5px;
+    box-shadow: inset 0 0 10px rbg(0, 0, 0, 0.5), O O 1Opx rgb(0, 0, 0, 0.5);
+    color: #FFF;
+    font-size: 1.4rem;
+    padding-top: 10px;
+    letter-spacing: 3px;
+    padding-left: 10px;
+    resize: none;
+}
+
+form .key_div {
+    width: 70%;
+    height: 50%;
+    margin: auto;
+    background-color: #FFF;
+    position: relative;
+    top: 5%;
+    border: 5px solid #FFF;
+    box-shadow: inset 0 0 5px rgb(0, 0, 0, 0.5);
+    border-radius: 20px;
+}
+
+.btn {
+    width: 5.5%;
+    height: 15%;
+    position: relative;
+    left: 1%;
+    margin: 5px 1px;
+    border-radius: 4px;
+    border: none;
+    border: 1px solid rgb(0, 0, 0, 0.3);
+    outline: none;
+    box-shadow: 0 0 5px rgb(0, 0, 0, 0.3);
+    cursor: pointer;
+    background-color: #FFF;
+    transition: 100ms;
+    font-size: 1.2rem;
+    color: rgb(0, 0, 0, 0.6);
+    top: 15px;
+}
+
+.btn:hover {
+    /* transform: scale(.9); */
+    box-shadow: 0 0 2px rgb(0, 0, 0, 0.1);
+}
+
+.delete {
+    width: 8% !important;
+}
+
+.tab {
+    width: 8% !important;
+}
+
+.caps {
+    width: 9.5% !important;
+}
+
+.enter {
+    width: 8% !important;
+}
+
+.shift {
+    width: 7% !important;
+}
+
+.shiftBig {
+    width: 7%!important;
+}
+
+.space {
+    width: 30% !important;
+    display: block;
+    margin: 5px auto;
+}
